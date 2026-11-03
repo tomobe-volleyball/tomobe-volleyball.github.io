@@ -171,12 +171,17 @@
   .value h3{font-size:19px;font-weight:900;margin:6px 0 10px}
   .value p{font-size:14.5px;color:var(--ink-soft)}
   @media(max-width:760px){
-    .values{gap:8px;margin-top:36px}
-    .value{padding:16px 8px;border-radius:14px;text-align:center}
-    .value .num{font-size:22px}
-    .value h3{font-size:15px;margin:2px 0 6px}
-    .value p{font-size:11.5px;line-height:1.6}
+    .values{grid-template-columns:1fr;gap:12px;margin-top:36px}
+    .value{padding:20px 22px;border-radius:14px}
+    .value .num{font-size:24px}
+    .value h3{font-size:17px;margin:2px 0 6px}
+    .value p{font-size:14px;line-height:1.7}
   }
+  /* スマホの改行調整 */
+  .nw{white-space:nowrap}
+  .sp-br{display:none}
+  @media(max-width:600px){.sp-br{display:inline}}
+  p,li,h3,h4,summary,.a{text-wrap:pretty}
 
   /* ============ HISTORY ============ */
   .history{background:var(--ink);color:var(--paper);overflow:hidden}
@@ -417,7 +422,7 @@
     <div class="court"></div>
     <div class="wrap hero-inner">
       <span class="kicker">茨城県笠間市・友部</span>
-      <h1>つなぐ一本に、<br>みんなで<span class="accent">本気</span>になる。</h1>
+      <h1>つなぐ一本に、<br>みんなで<br class="sp-br"><span class="accent">本気</span>になる。</h1>
       <div class="since">
         <span class="label">SINCE</span>
         <span class="yr">1978</span>
@@ -579,7 +584,7 @@
         <div class="act-side reveal">
           <h3>活動の内容</h3>
           <ul>
-            <li>基礎練習（パス・レシーブ・サーブ・スパイク）</li>
+            <li><span>基礎練習（パス・レシーブ・<span class="nw">サーブ・スパイク）</span></span></li>
             <li>学年・レベルに合わせたグループ練習</li>
             <li>練習試合・市内大会・県大会への参加</li>
             <li>お楽しみ会などの行事</li>
@@ -614,8 +619,8 @@
       <div class="steps">
         <div class="step reveal"><h4>お問い合わせ</h4><p>InstagramのDMから、お気軽にご連絡ください。</p></div>
         <div class="step reveal"><h4>体験に参加</h4><p>まずは練習を見学・体験。雰囲気を感じてみてください。</p></div>
-        <div class="step reveal"><h4>ご相談</h4><p>費用や持ち物など、不安な点は何でもご相談ください。</p></div>
-        <div class="step reveal"><h4>入団</h4><p>申込書のご提出で入団完了。一緒に汗を流しましょう！</p></div>
+        <div class="step reveal"><h4>ご相談</h4><p>費用や持ち物など、不安な点は何でも<span class="nw">ご相談ください。</span></p></div>
+        <div class="step reveal"><h4>入団</h4><p>申込書のご提出で入団完了。一緒に<span class="nw">汗を流しましょう！</span></p></div>
       </div>
     </div>
   </section>
@@ -630,18 +635,18 @@
       <div class="faq-list">
         <details class="qa reveal">
           <summary><span class="q">Q</span>初めてでも入れますか？<span class="plus"></span></summary>
-          <div class="a">もちろんです。多くの子がボールに触れたことのない状態から始めています。基礎から丁寧に教えますのでご安心ください。</div>
+          <div class="a">もちろんです。多くの子がボールに触れたことのない状態から始めています。基礎から丁寧に教えますので<span class="nw">ご安心ください。</span></div>
         </details>
         <details class="qa reveal">
           <summary><span class="q">Q</span>体験や見学はできますか？<span class="plus"></span></summary>
           <div class="a">はい、いつでも歓迎しています。動きやすい服装と室内シューズ、飲み物をお持ちください。事前にご連絡いただけるとスムーズです。</div>
         </details>
         <details class="qa reveal">
-          <summary><span class="q">Q</span>保護者の当番や手伝いはありますか？<span class="plus"></span></summary>
+          <summary><span class="q">Q</span><span>保護者の当番や手伝いは<span class="nw">ありますか？</span></span><span class="plus"></span></summary>
           <div class="a">カギ当番など、保護者の皆さまにご協力いただく場面があります。無理のない範囲で分担していますので、詳しくはお問い合わせください。</div>
         </details>
         <details class="qa reveal">
-          <summary><span class="q">Q</span>どの地域の子が通っていますか？<span class="plus"></span></summary>
+          <summary><span class="q">Q</span><span>どの地域の子が<span class="nw">通っていますか？</span></span><span class="plus"></span></summary>
           <div class="a">友部地区を中心に、笠間市内のさまざまな学校のお子さんが通っています。学校が違っても、すぐに仲良くなれますよ。</div>
         </details>
       </div>
@@ -656,6 +661,10 @@
         <div class="ja">お知らせ</div>
       </div>
       <div class="news-list">
+        <div class="news-item reveal">
+          <span class="date">11.1</span><span class="tag result">結果</span>
+          <p>茨城県小学生バレーボール選手権大会 茨城県大会に出場しました。たくさんの応援ありがとうございました！この経験を力に、次の大会に向けて練習を重ねていきます。</p>
+        </div>
         <div class="news-item reveal">
           <span class="date">10.10</span><span class="tag result">結果</span>
           <p>茨城県小学生バレーボール選手権大会 県央支部予選（混合の部）を3位で通過しました。応援ありがとうございました！ 県大会は10月31日に行われます。引き続き応援よろしくお願いします。</p>
@@ -673,7 +682,7 @@
       </div>
       <div class="contact-grid">
         <div class="reveal">
-          <p class="contact-lead">まずは一度、<span>コートをのぞきに</span>きませんか？</p>
+          <p class="contact-lead">まずは一度、<br class="sp-br"><span>コートをのぞきに</span>きませんか？</p>
           <p class="note">体験・見学・入団のご相談は、いつでも受け付けています。「うちの子に合うかな？」という段階でも大丈夫。InstagramのDMから、どうぞお気軽にご連絡ください。</p>
         </div>
         <div class="contact-box reveal">
@@ -683,7 +692,7 @@
               <div class="v"><a href="https://www.instagram.com/tomobe.volleyball/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--gold)">@tomobe.volleyball</a></div>
             </div>
           </div>
-          <a href="https://www.instagram.com/tomobe.volleyball/" target="_blank" rel="noopener" class="btn-primary">InstagramのDMで問い合わせる →</a>
+          <a href="https://www.instagram.com/tomobe.volleyball/" target="_blank" rel="noopener" class="btn-primary">DMで問い合わせる →</a>
         </div>
       </div>
     </div>
